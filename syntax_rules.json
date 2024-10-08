@@ -1,0 +1,14 @@
+{
+    "keyword_case": {
+        "rule": "Inconsistent use of keywords ",
+        "recommendation": "Use UPPERCASE for SQL keywords"
+    },
+    "naming_convention": {
+        "rule": "Inconsistent naming convention",
+        "recommendation": "Follow standard case for tables and columns"
+    },
+    "indentation": {
+        "rule": "Incorrect indentation",
+        "recommendation": "Ensure consistent indentation"
+    }
+}
