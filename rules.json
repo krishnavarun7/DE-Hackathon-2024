@@ -1,0 +1,34 @@
+{
+  "rules": [
+    {
+      "id": "SELECT_STAR",
+      "description": "Avoid using SELECT * in query",
+      "recommendation": "Specify the columns needed explicitly to improve performance and readability.",
+      "pattern": "SELECT *",
+      "severity": "high"
+    },
+    {
+      "id": "MISSING_WHERE",
+      "description": "WHERE clause is missing in a large table query",
+      "recommendation": "Add a WHERE clause to filter rows for better performance.",
+      "pattern": "SELECT .+ FROM .+;",
+      "check_where": true,
+      "severity": "medium"
+    },
+    {
+      "id": "INDEX_USAGE",
+      "description": "Ensure proper index usage",
+      "recommendation": "Add indexes to columns used in JOIN or WHERE clauses.",
+      "metadata_required": true,
+      "severity": "high"
+    },
+    {
+      "id": "INEFFICIENT_JOIN",
+      "description": "Avoid using Cartesian joins",
+      "recommendation": "Ensure all JOINs have a valid ON clause to avoid Cartesian products.",
+      "pattern": "JOIN",
+      "check_cartesian_join": true,
+      "severity": "high"
+    }
+  ]
+}
